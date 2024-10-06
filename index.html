@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Tickers</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="max-w-2xl mx-auto">
+        <h1 class="text-4xl font-bold mb-8 text-center">Stock Market</h1>
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <label for="tickerDropdown" class="block mb-2 ml-[225px] paragraphCentre">Select a Stock Ticker</label>
+            <select id="tickerDropdown" class="w-full p-2 border rounded mb-4">
+                <option value="">Loading tickers...</option>
+            </select>
+            <button onclick="displaySelectedTicker()" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">Display Stock Data</button>
+        </div>
+        <div id="selectedTickerInfo" class="bg-white rounded-lg shadow-md p-6 min-h-[200px] hidden">
+            <!-- Stock data will be displayed here -->
+        </div>
+    </div>
+    <script src="fetch.js"></script>
+</body>
+</html>
